@@ -1,5 +1,8 @@
 package src.app;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Customer {
     private final String name;
     private final String phone;
@@ -18,4 +21,10 @@ public class Customer {
         return phone;
     }
 
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String currentTime = LocalDateTime.now().format(formatter);
+        return "Customer: " + name + ", phone: " + phone + ", time: " + currentTime;
+    }
 }

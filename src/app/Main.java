@@ -4,8 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Customer customer = getCustomer(getData());
-        String output = "Customer: " + customer.getName() + ", phone " + customer.getPhone();
-        getOutput(output);
+        getOutput(customer.toString());
     }
 
     public static String[] getData() {
